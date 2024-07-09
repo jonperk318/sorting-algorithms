@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Tester {
+public class Test {
     public static void main(String[] args) {
 
         ArrayList<Integer> testArr = new ArrayList<>
@@ -25,7 +25,11 @@ public class Tester {
         Utils.printArray(testArrMergeSort);
 
         // Quick sort test
-
+        ArrayList<Integer> testArrQuickSort = testArr;
+        QuickSort quickSort = new QuickSort();
+        quickSort.sort(testArrQuickSort, 0, testArrQuickSort.size() - 1);
+        System.out.print("Quick Sort test:\t");
+        Utils.printArray(testArrQuickSort);
 
         System.out.println();
     }

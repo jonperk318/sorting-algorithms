@@ -13,20 +13,20 @@ Better for linked lists than arrays
 def merge(left, right): # helper function that merges two subarrays into a single sorted array
     
     result = []
-    i, j = 0, 0
+    left_idx, right_idx = 0, 0
     
-    while i < len(left) and j < len(right): # compare index by index of sorted subarrays and merge
+    while left_idx < len(left) and right_idx < len(right): # compare index by index of sorted subarrays and merge
         
-        if left[i] <= right[j]:
-            result.append(left[i])
-            i += 1
+        if left[left_idx] <= right[right_idx]:
+            result.append(left[left_idx])
+            left_idx += 1
 
         else:
-            result.append(right[j])
-            j += 1
+            result.append(right[right_idx])
+            right_idx += 1
             
-    result += left[i:] # when one array is fully added, add the rest of the other array
-    result += right[j:]
+    result += left[left_idx:] # when one array is fully added, add the rest of the other array
+    result += right[right_idx:]
     
     return result # single merged array
 
@@ -37,7 +37,7 @@ def merge_sort(arr): # main function
         return arr
     
     mid = len(arr) // 2
-    left = merge_sort(arr[:mid]) # recursive call with both halves of the unsorted array
+    left = merge_sort(arr[:mid]) # recursive calls with both halves of the unsorted array
     right = merge_sort(arr[mid:])
     
-    return merge(left, right) # merges sorted arrays
+    return merge(left, right) # merge sorted arrays

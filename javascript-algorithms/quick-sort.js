@@ -31,7 +31,7 @@ function partition(arr, first, last) { // helper function to choose the pivot
     return i + 1; // return index of pivot
 }
 
-function quickSort(arr, first, last) {
+function quickSort(arr, first, last) { // main function
 
     if (first >= last) { // base case: empty array
         return;

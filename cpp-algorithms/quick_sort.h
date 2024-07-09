@@ -15,6 +15,36 @@ Better for arrays than linked lists
 #ifndef QUICK_SORT_H
 #define QUICK_SORT_H
 
+#include <vector>
+using namespace std;
 
+int partition(vector<int>& arr, int const first, int const last)
+  // helper function to choose the pivot
+{
+    int const pivot = arr[last]; // last element is selected as the pivot
+    int i = (first - 1);
+
+    for(int j = first; j <= last - 1; j++)
+    {
+        if(arr[j] < pivot) // check if each element is smaller than the pivot
+        {
+            i++; //if so, increment index of smaller element
+            swap(arr[i], arr[j]); // swap elements
+        }
+    }
+    swap(arr[i + 1], arr[last]); // swap pivot
+    return i + 1; // return index of pivot
+}
+
+void quick_sort(vector<int>& arr, int const first, int const last) // main function
+{
+    if (first >= last) { // base case: empty array
+        return;
+    }
+
+    int const pivot = partition(arr, first, last); // find index of pivot and sort on either side
+    quick_sort(arr, first, pivot - 1); // recursive calls for each side of the pivot
+    quick_sort(arr, pivot + 1, last);
+}
 
 #endif //QUICK_SORT_H

@@ -2,6 +2,7 @@
 #include "utils.h"
 #include "insertion_sort.h"
 #include "merge_sort.h"
+#include "quick_sort.h"
 using namespace std;
 
 int main() {
@@ -21,6 +22,12 @@ int main() {
     merge_sort(test_arr_merge_sort, 0, test_arr_merge_sort.size() - 1);
     cout << "Merge sort test:\t\t";
     print_array(test_arr_merge_sort);
+
+    // Test quick sort
+    vector<int> test_arr_quick_sort = test_arr;
+    quick_sort(test_arr_quick_sort, 0, test_arr_quick_sort.size() - 1);
+    cout << "Quick sort test:\t\t";
+    print_array(test_arr_quick_sort);
 
     return 0;
 }
