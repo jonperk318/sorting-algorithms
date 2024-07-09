@@ -3,6 +3,9 @@ project(cpp_algorithms)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cpp_algorithms main.cpp
+add_executable(cpp_algorithms test.cpp
         insertion_sort.h
-        utils.h)
+        utils.h
+        merge_sort.h
+        quick_sort.h
+)

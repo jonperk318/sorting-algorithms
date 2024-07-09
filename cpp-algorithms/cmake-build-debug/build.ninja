@@ -49,8 +49,8 @@ cmake_ninja_workdir = /Users/jp/Documents/GitHub.nosync/sorting-algorithms/cpp-a
 
 build cmake_object_order_depends_target_cpp_algorithms: phony || CMakeFiles/cpp_algorithms.dir
 
-build CMakeFiles/cpp_algorithms.dir/main.cpp.o: CXX_COMPILER__cpp_algorithms_unscanned_Debug /Users/jp/Documents/GitHub.nosync/sorting-algorithms/cpp-algorithms/main.cpp || cmake_object_order_depends_target_cpp_algorithms
-  DEP_FILE = CMakeFiles/cpp_algorithms.dir/main.cpp.o.d
+build CMakeFiles/cpp_algorithms.dir/test.cpp.o: CXX_COMPILER__cpp_algorithms_unscanned_Debug /Users/jp/Documents/GitHub.nosync/sorting-algorithms/cpp-algorithms/test.cpp || cmake_object_order_depends_target_cpp_algorithms
+  DEP_FILE = CMakeFiles/cpp_algorithms.dir/test.cpp.o.d
   FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/cpp_algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles/cpp_algorithms.dir
@@ -63,7 +63,7 @@ build CMakeFiles/cpp_algorithms.dir/main.cpp.o: CXX_COMPILER__cpp_algorithms_uns
 #############################################
 # Link the executable cpp_algorithms
 
-build cpp_algorithms: CXX_EXECUTABLE_LINKER__cpp_algorithms_Debug CMakeFiles/cpp_algorithms.dir/main.cpp.o
+build cpp_algorithms: CXX_EXECUTABLE_LINKER__cpp_algorithms_Debug CMakeFiles/cpp_algorithms.dir/test.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
   OBJECT_DIR = CMakeFiles/cpp_algorithms.dir
   POST_BUILD = :

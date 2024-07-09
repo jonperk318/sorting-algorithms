@@ -17,14 +17,14 @@ void insertion_sort(vector<int>& arr) {
 
     auto const length = arr.size();
 
-    for (int i = 1; i < length; ++i) {
+    for (int i = 1; i < length; ++i) { // skip the 0th index
 
         int const key = arr[i];
-        int j = i - 1;
+        int j = i - 1; // insert arr[i] into the sorted sequence arr[1] to arr[j-1]
 
         while (j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j];
-            j--;
+            j--; // decrement j until it finds a smaller number or it's the first index of the array
         }
         arr[j + 1] = key;
     }
