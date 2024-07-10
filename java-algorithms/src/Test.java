@@ -21,15 +21,29 @@ public class Test {
         ArrayList<Integer> testArrMergeSort = testArr;
         MergeSort mergeSort = new MergeSort();
         mergeSort.sort(testArrMergeSort, 0, testArrMergeSort.size() - 1);
-        System.out.print("Merge Sort test:\t");
+        System.out.print("Merge Sort test:\t\t");
         Utils.printArray(testArrMergeSort);
 
         // Quick sort test
         ArrayList<Integer> testArrQuickSort = testArr;
         QuickSort quickSort = new QuickSort();
         quickSort.sort(testArrQuickSort, 0, testArrQuickSort.size() - 1);
-        System.out.print("Quick Sort test:\t");
+        System.out.print("Quick Sort test:\t\t");
         Utils.printArray(testArrQuickSort);
+
+        // Selection sort test
+        ArrayList<Integer> testArrSelectionSort = testArr;
+        SelectionSort selectionSort = new SelectionSort();
+        selectionSort.sort(testArrSelectionSort);
+        System.out.print("Selection Sort test:\t");
+        Utils.printArray(testArrSelectionSort);
+
+        // Heap sort test
+        ArrayList<Integer> testArrHeapSort = testArr;
+        HeapSort heapSort = new HeapSort();
+        heapSort.sort(testArrHeapSort);
+        System.out.print("Heap Sort test:\t\t\t");
+        Utils.printArray(testArrHeapSort);
 
         System.out.println();
     }

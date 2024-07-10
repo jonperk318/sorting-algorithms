@@ -8,7 +8,7 @@ Time complexity:
     average case: O(n*log(n))
     worst case: O(n^2) (chosen partition is always an extrema of the subarray)
 Space complexity: O(1)
-Stable
+Most often not stable
 Better for arrays than linked lists
 */
 

@@ -3,6 +3,8 @@
 #include "insertion_sort.h"
 #include "merge_sort.h"
 #include "quick_sort.h"
+#include "selection_sort.h"
+#include "heap_sort.h"
 using namespace std;
 
 int main() {
@@ -28,6 +30,18 @@ int main() {
     quick_sort(test_arr_quick_sort, 0, test_arr_quick_sort.size() - 1);
     cout << "Quick sort test:\t\t";
     print_array(test_arr_quick_sort);
+
+    // Test selection sort
+    vector<int> test_arr_selection_sort = test_arr;
+    selection_sort(test_arr_selection_sort);
+    cout << "Selection sort test:\t";
+    print_array(test_arr_selection_sort);
+
+    // Test heap sort
+    vector<int> test_arr_heap_sort = test_arr;
+    heap_sort(test_arr_heap_sort, test_arr_heap_sort.size());
+    cout << "Heap sort test:\t\t\t";
+    print_array(test_arr_heap_sort);
 
     return 0;
 }

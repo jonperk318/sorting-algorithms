@@ -19,7 +19,7 @@ def partition(arr, first, last): # helper function to choose the pivot
 
     for j in range(first, last):
 
-        if arr[j] < pivot: # check if each element is smaller than pivot
+        if arr[j] <= pivot: # check if each element is smaller than pivot
             i += 1 # if so, increment index of smaller element
             arr[i], arr[j] = arr[j], arr[i] # swap elements
 
@@ -30,8 +30,8 @@ def partition(arr, first, last): # helper function to choose the pivot
 
 def quick_sort(arr, first, last): # main function
 
-    if len(arr) < 2: # base case: array with single value or empty array
-        return arr
+    if first >= last: # base case is an empty array
+        return
     
     pivot = partition(arr, first, last) # find index of pivot and sort on either side
     quick_sort(arr, first, pivot - 1) # recursive calls for each side of the pivot

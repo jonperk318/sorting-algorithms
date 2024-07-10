@@ -8,4 +8,6 @@ add_executable(cpp_algorithms test.cpp
         utils.h
         merge_sort.h
         quick_sort.h
+        selection_sort.h
+        heap_sort.h
 )
