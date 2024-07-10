@@ -10,4 +10,5 @@ add_executable(cpp_algorithms test.cpp
         quick_sort.h
         selection_sort.h
         heap_sort.h
+        counting_sort.h
 )

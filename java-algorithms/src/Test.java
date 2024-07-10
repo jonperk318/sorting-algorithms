@@ -11,39 +11,46 @@ public class Test {
         Utils.printArray(testArr);
 
         // Insertion sort test
-        ArrayList<Integer> testArrInsertionSort = testArr;
+        ArrayList<Integer> testArrInsertionSort = new ArrayList<Integer>(testArr);
         InsertionSort insertionSort = new InsertionSort();
         insertionSort.sort(testArrInsertionSort);
         System.out.print("Insertion Sort test:\t");
         Utils.printArray(testArrInsertionSort);
 
         // Merge sort test
-        ArrayList<Integer> testArrMergeSort = testArr;
+        ArrayList<Integer> testArrMergeSort = new ArrayList<Integer>(testArr);
         MergeSort mergeSort = new MergeSort();
         mergeSort.sort(testArrMergeSort, 0, testArrMergeSort.size() - 1);
         System.out.print("Merge Sort test:\t\t");
         Utils.printArray(testArrMergeSort);
 
         // Quick sort test
-        ArrayList<Integer> testArrQuickSort = testArr;
+        ArrayList<Integer> testArrQuickSort = new ArrayList<Integer>(testArr);
         QuickSort quickSort = new QuickSort();
         quickSort.sort(testArrQuickSort, 0, testArrQuickSort.size() - 1);
         System.out.print("Quick Sort test:\t\t");
         Utils.printArray(testArrQuickSort);
 
         // Selection sort test
-        ArrayList<Integer> testArrSelectionSort = testArr;
+        ArrayList<Integer> testArrSelectionSort = new ArrayList<Integer>(testArr);
         SelectionSort selectionSort = new SelectionSort();
         selectionSort.sort(testArrSelectionSort);
         System.out.print("Selection Sort test:\t");
         Utils.printArray(testArrSelectionSort);
 
         // Heap sort test
-        ArrayList<Integer> testArrHeapSort = testArr;
+        ArrayList<Integer> testArrHeapSort = new ArrayList<Integer>(testArr);
         HeapSort heapSort = new HeapSort();
         heapSort.sort(testArrHeapSort);
         System.out.print("Heap Sort test:\t\t\t");
         Utils.printArray(testArrHeapSort);
+
+        // Counting sort test
+        ArrayList<Integer> testArrCountingSort = new ArrayList<Integer>(testArr);
+        CountingSort countingSort = new CountingSort();
+        countingSort.sort(testArrCountingSort);
+        System.out.print("Counting Sort test:\t\t");
+        Utils.printArray(testArrCountingSort);
 
         System.out.println();
     }

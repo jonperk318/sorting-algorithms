@@ -5,6 +5,7 @@
 #include "quick_sort.h"
 #include "selection_sort.h"
 #include "heap_sort.h"
+#include "counting_sort.h"
 using namespace std;
 
 int main() {
@@ -42,6 +43,12 @@ int main() {
     heap_sort(test_arr_heap_sort, test_arr_heap_sort.size());
     cout << "Heap sort test:\t\t\t";
     print_array(test_arr_heap_sort);
+
+    // Test counting sort
+    vector<int> test_arr_counting_sort = test_arr;
+    counting_sort(test_arr_counting_sort);
+    cout << "Counting sort test:\t\t";
+    print_array(test_arr_counting_sort);
 
     return 0;
 }

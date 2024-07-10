@@ -12,19 +12,19 @@ Not stable
 
 def heapify(arr, n, root): # helper function to create data heap from binary tree
                     # n is size of the array
-    largest = root # largest element is the root
-    l = 2 * root + 1
-    r = 2 * root + 2
+    largest = root  # largest element is the root
+    left = 2 * root + 1
+    right = 2 * root + 2
 
-    if l < n and arr[largest] < arr[l]: # if left child exists and is > root
-        largest = l
+    if left < n and arr[largest] < arr[left]: # if left child exists and is > root
+        largest = left
 
-    if r < n and arr[largest] < arr[r]: # if right child exists and is > root
-        largest = r
+    if right < n and arr[largest] < arr[right]: # if right child exists and is > root
+        largest = right
 
     if largest != root: # swap largest with root if needed
         arr[root], arr[largest] = arr[largest], arr[root]
-        heapify(arr, n, largest)
+        heapify(arr, n, largest) # recursive call
 
 
 def heap_sort(arr): # main function

@@ -14,13 +14,15 @@ import java.util.Collections;
 
 public class SelectionSort {
 
-    void sort(ArrayList<Integer> arr)
-    {
-        for (int i = 0; i < arr.size() - 1; i++)
+    void sort(ArrayList<Integer> arr) {
+
+        int n = arr.size();
+
+        for (int i = 0; i < n - 1; i++)
         {
             int minIdx = i; // minimum unsorted element index
 
-            for (int j = i + 1; j < arr.size(); j++)
+            for (int j = i + 1; j < n; j++)
 
                 if (arr.get(j) < arr.get(minIdx)) // if minimum unsorted index is greater than current index
                     minIdx = j; // minimum index becomes that index

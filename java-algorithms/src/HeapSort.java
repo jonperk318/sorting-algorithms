@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class HeapSort {
-    void heapify(ArrayList<Integer> arr, int n, int root) { //helper function to create data heap from binary tree
-                            // n is size of the array
+    void heapify(ArrayList<Integer> arr, int n, int root) { // n is size of the array
+                            // helper function to create data heap from binary tree
         int largest = root; // largest element is the root
         int left = 2 * root + 1;
         int right = 2 * root + 2;
@@ -31,7 +31,7 @@ public class HeapSort {
             heapify(arr, n, largest); // recursive call
         }
     }
-    public void sort(ArrayList<Integer> arr)
+    public void sort(ArrayList<Integer> arr) // main function
     {
         int n = arr.size();
 

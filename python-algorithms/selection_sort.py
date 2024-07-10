@@ -1,6 +1,6 @@
 """
 SELECTION SORT: a simple algorithm which constantly finds the smallest value 
-of an array and swaps it with the first unsorted elemenet
+of an array and swaps it with the first unsorted element
 Time complexity:
     best case: O(n^2)
     average case: O(n^2)
@@ -11,11 +11,13 @@ Not stable
 
 def selection_sort(arr):
 
-    for i in range(len(arr)):
+    n = len(arr)
+
+    for i in range(n):
 
         min_idx = i # minimum unsorted element index
 
-        for j in range(i + 1, len(arr)):
+        for j in range(i + 1, n):
 
             if arr[min_idx] > arr[j]: # if minimum unsorted index is greater than current index
                 min_idx = j # minimum index becomes that index
