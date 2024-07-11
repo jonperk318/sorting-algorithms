@@ -17,7 +17,7 @@ def counting_sort(arr):
     for i in arr: # store count of occurences in count_arr
         count_arr[i] += 1
  
-    for j in range(1, m + 1): # count_arr[i] now contains actual position 
+    for j in range(1, m + 1): # count_arr[i] will now contain actual position 
                                 # of this digit in output array
         count_arr[j] += count_arr[j - 1]
  

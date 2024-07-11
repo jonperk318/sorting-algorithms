@@ -4,8 +4,9 @@ from quick_sort import quick_sort
 from selection_sort import selection_sort
 from heap_sort import heap_sort
 from counting_sort import counting_sort
+from radix_sort import radix_sort
 
-test_arr = [3,6,7,2,4,90,43,103,2,30234,56,5,3,2,76,43,34,102,9]
+test_arr = [3, 6, 7, 2, 4, 90, 43, 103, 2, 30234, 56, 5, 3, 2, 76, 43, 34, 102, 9]
 
 # Test sorting functions
 print("\nUnsorted test array:\t" + str(test_arr))
@@ -15,5 +16,6 @@ print("Quick sort test:\t" + str(quick_sort(test_arr, 0, len(test_arr) - 1)))
 print("Selection sort test:\t" + str(selection_sort(test_arr)))
 print("Heap sort test:\t\t" + str(heap_sort(test_arr)))
 print("Counting sort test:\t" + str(counting_sort(test_arr)))
+print("Radix sort test:\t" + str(radix_sort(test_arr)))
 
 print("\n")

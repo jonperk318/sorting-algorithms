@@ -25,7 +25,8 @@ function countingSort(arr) {
     }
 
     for (let k = 1; k <= m; k++) {
-        countArr[k] += countArr[k - 1]; // countArr[k] now contains actual position of this digit in output array
+        countArr[k] += countArr[k - 1]; // countArr[k] will now conatin the actual position 
+                                        // of this digit in output array
     }
 
     const outputArr = new Array(n);
