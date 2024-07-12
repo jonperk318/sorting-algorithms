@@ -14,7 +14,7 @@ function countingSort(arr) {
     const n = arr.length;
     let m = 0;
 
-    for (let i = 0; i < n; i++) { // finding max of arr
+    for (let i = 0; i < n; i++) { // find max of arr
         m = Math.max(m, arr[i]);
     }
 

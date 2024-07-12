@@ -1,3 +1,15 @@
+/* 
+RADIX SORT: stores elements in buckets according to the value of their n'th digit,
+then recursively sorts the buckets.
+Time complexity:
+    best case: O(a(n + b)) to O(a * n)
+    average case: O(p * (n + d)) where p is the number of passes
+    worst case: O(n^2)
+Space complexity: O(n + k) where k is the largest element in the dth elements
+Stable
+*/
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -39,8 +39,8 @@ def counting_sort_by_digits(arr, exp): # auxiliary function
 def radix_sort(arr): # main function
 
     m = max(arr)
-
     exp = 1 # 10 raised to the power of the current digit number
+    
     while m / exp >= 1: # counting_sort for every digit
         counting_sort_by_digits(arr, exp)
         exp *= 10

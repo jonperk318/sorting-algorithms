@@ -11,4 +11,5 @@ add_executable(cpp_algorithms test.cpp
         selection_sort.h
         heap_sort.h
         counting_sort.h
+        radix_sort.h
 )
