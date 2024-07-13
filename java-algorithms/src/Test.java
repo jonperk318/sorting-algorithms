@@ -57,6 +57,13 @@ public class Test {
         System.out.print("Radix Sort test:\t");
         Utils.printArray(testArrRadixSort);
 
+        // Bubble sort test
+        ArrayList<Integer> testArrBubbleSort = new ArrayList<Integer>(testArr);
+        BubbleSort bubbleSort = new BubbleSort();
+        bubbleSort.sort(testArrBubbleSort);
+        System.out.print("Bubble Sort test:\t");
+        Utils.printArray(testArrBubbleSort);
+
         System.out.println();
     }
 }

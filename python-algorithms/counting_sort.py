@@ -9,7 +9,7 @@ Space complexity: O(n + m)
 Stable
 """
 
-def counting_sort(arr):
+def counting_sort(arr): # auxiliary function
 
     m = max(arr)
     count_arr = [0] * (m + 1)

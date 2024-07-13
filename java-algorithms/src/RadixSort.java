@@ -17,11 +17,11 @@ import java.util.List;
 public class RadixSort {
 
     static void countingSort(ArrayList<Integer> arr, int n, int exp)
-    {
+    { // auxiliary function
 
         List<Integer> countArr = new ArrayList<Integer>(Collections.nCopies(10, 0));
 
-        for (int i = 0; i < n; i++) {// store count of occurrences in countArr
+        for (int i = 0; i < n; i++) { // store count of occurrences in countArr
             int d = (arr.get(i) / exp) % 10;
             countArr.set(d, countArr.get(d) + 1);
         }
@@ -44,6 +44,7 @@ public class RadixSort {
     static void sort(ArrayList<Integer> arr, int n)
     {
         int m = Collections.max(arr);
+
         for (int exp = 1; m / exp > 0; exp *= 10)
             countingSort(arr, n, exp);
     }

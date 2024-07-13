@@ -7,6 +7,7 @@
 #include "heap_sort.h"
 #include "counting_sort.h"
 #include "radix_sort.h"
+#include "bubble_sort.h"
 using namespace std;
 
 int main() {
@@ -56,6 +57,12 @@ int main() {
     radix_sort(test_arr_radix_sort, test_arr_radix_sort.size());
     cout << "Radix sort test:\t\t";
     print_array(test_arr_radix_sort);
+
+    // Bubble sort test
+    vector<int> test_arr_bubble_sort = test_arr;
+    bubble_sort(test_arr_bubble_sort);
+    cout << "Bubble sort test:\t\t";
+    print_array(test_arr_bubble_sort);
 
     return 0;
 }
