@@ -1,11 +1,9 @@
-from insertion_sort import insertion_sort
-from merge_sort import merge_sort
-from quick_sort import quick_sort
-from selection_sort import selection_sort
-from heap_sort import heap_sort
-from counting_sort import counting_sort
-from radix_sort import radix_sort
-from bubble_sort import bubble_sort
+"""
+Testing all sorting functions to verify their ability to sort correcly
+"""
+
+# importing all sorting functions from "all.py"
+from all import * 
 
 test_arr = [3, 6, 7, 2, 4, 90, 43, 103, 2, 30234, 56, 5, 3, 2, 76, 43, 34, 102, 9]
 
