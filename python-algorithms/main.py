@@ -20,9 +20,9 @@ sample_sizes = [eval(i) for i in sample_sizes]
 
 samples = []
 
-for s in sample_sizes: # Create a list of lists of input samples
+for size in sample_sizes: # Create a list of lists of input samples
 
-    r_file_path = os.path.join(current_dir, "../samples/" + str(s) + ".txt")
+    r_file_path = os.path.join(current_dir, "../samples/" + str(size) + ".txt")
     with open(r_file_path, "r") as file:
         input = file.read()
     input = input.split(",")
@@ -37,65 +37,65 @@ for s in sample_sizes: # Create a list of lists of input samples
 
 count = 0
 
-for s in samples:
+for sample in samples: # run all sorting functions
 
     # Insertion sort
-    s1 = list(s)
+    s1 = list(sample)
     tick = time.perf_counter()
     insertion_sort(s1)
     tock = time.perf_counter()
     insertion_times.append(tock - tick)
 
     # Merge sort
-    s3 = list(s)
+    s3 = list(sample)
     tick = time.perf_counter()
     merge_sort(s3)
     tock = time.perf_counter()
     merge_times.append(tock - tick)
 
     # Quick sort
-    s4 = list(s)
+    s4 = list(sample)
     tick = time.perf_counter()
     quick_sort(s4, 0, len(s4) - 1)
     tock = time.perf_counter()
     quick_times.append(tock - tick)
 
     # Selection sort
-    s2 = list(s)
+    s2 = list(sample)
     tick = time.perf_counter()
     selection_sort(s2)
     tock = time.perf_counter()
     selection_times.append(tock - tick)
 
     # Heap sort
-    s5 = list(s)
+    s5 = list(sample)
     tick = time.perf_counter()
     heap_sort(s5)
     tock = time.perf_counter()
     heap_times.append(tock - tick)
 
     # Counting sort
-    s6 = list(s)
+    s6 = list(sample)
     tick = time.perf_counter()
     counting_sort(s6)
     tock = time.perf_counter()
     counting_times.append(tock - tick)
 
     # Radix sort
-    s7 = list(s)
+    s7 = list(sample)
     tick = time.perf_counter()
     radix_sort(s7)
     tock = time.perf_counter()
     radix_times.append(tock - tick)
 
     # Bubble sort
-    s8 = list(s)
+    s8 = list(sample)
     tick = time.perf_counter()
     bubble_sort(s8)
     tock = time.perf_counter()
     bubble_times.append(tock - tick)
 
-    print("Finishing sorting array of length " + str(sample_sizes[count]))
+    print("Sorted array of length " + str(sample_sizes[count]))
     count += 1
 
 
@@ -108,7 +108,7 @@ sorting_names = ["insertion-sort", "merge-sort", "quick-sort", "selection-sort",
 
 for i in range(len(sorting_times)):
 
-    w_file_path = os.path.join(current_dir, "python-sorting-times/" + 
+    w_file_path = os.path.join(current_dir, "python-sorting-times/python-" + 
                                sorting_names[i] + "-times.txt")
 
     with open(w_file_path, "w") as file:
