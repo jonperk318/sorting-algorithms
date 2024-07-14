@@ -13,4 +13,6 @@ add_executable(cpp_algorithms test.cpp
         counting_sort.h
         radix_sort.h
         bubble_sort.h
+        all.h
+        main.cpp
 )

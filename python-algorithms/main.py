@@ -3,8 +3,7 @@ This script tests all 8 sorting algorithms using the randomly generated input fi
 and stores their run times in a text file to be plotted elsewhere
 """
 
-# importing all sorting functions from "all.py"
-from all import *
+from all import * # import all sorting functions
 
 import os
 import time
@@ -113,5 +112,5 @@ for i in range(len(sorting_times)):
 
     with open(w_file_path, "w") as file:
 
-        time_string = ",".join([str(j) for j in sorting_times[i]])
+        time_string = ",".join([str(time) for time in sorting_times[i]])
         file.write(time_string)

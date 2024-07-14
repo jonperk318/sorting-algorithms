@@ -2,12 +2,11 @@
 Testing all sorting functions to verify their ability to sort correcly
 """
 
-# importing all sorting functions from "all.py"
-from all import * 
+from all import * # import all sorting functions
 
 test_arr = [3, 6, 7, 2, 4, 90, 43, 103, 2, 30234, 56, 5, 3, 2, 76, 43, 34, 102, 9]
 
-# Test sorting functions
+# test sorting functions
 print("\nUnsorted test array:\t" + str(test_arr))
 test_arr_insertion_sort = list(test_arr)
 print("Insertion sort test:\t" + str(insertion_sort(test_arr_insertion_sort)))

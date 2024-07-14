@@ -14,4 +14,11 @@ void print_array(const vector<int>& arr) // prints all elements of an array
     cout << endl;
 }
 
+void print_array_doubles(const vector<double>& arr) // prints all elements of an array of doubles
+{
+    for (double const i : arr)
+        cout << i << " ";
+    cout << endl;
+}
+
 #endif //UTILS_H

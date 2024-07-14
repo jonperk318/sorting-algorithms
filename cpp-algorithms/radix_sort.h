@@ -14,7 +14,7 @@ Stable
 #include <vector>
 using namespace std;
 
-void count_sort_by_digits(vector<int>& arr, int const n, int const exp)
+void counting_sort_by_digits(vector<int>& arr, int const n, int const exp)
 { // auxiliary function
 
     vector<int> count_arr(10, 0);
@@ -36,13 +36,13 @@ void count_sort_by_digits(vector<int>& arr, int const n, int const exp)
         arr[i] = output_arr[i];
 }
 
-void radix_sort(vector<int>& arr, int const n)
+void radix_sort(vector<int>& arr)
 { // main function
-
-    int m = *max_element(arr.begin(), arr.end());
+    int const n = arr.size();
+    int const m = *max_element(arr.begin(), arr.end());
 
     for (int exp = 1; m / exp > 0; exp *= 10)
-        count_sort_by_digits(arr, n, exp);
+        counting_sort_by_digits(arr, n, exp);
 }
 
 #endif //RADIX_SORT_H

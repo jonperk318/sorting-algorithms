@@ -1,18 +1,9 @@
-#include <iostream>
-#include "utils.h"
-#include "insertion_sort.h"
-#include "merge_sort.h"
-#include "quick_sort.h"
-#include "selection_sort.h"
-#include "heap_sort.h"
-#include "counting_sort.h"
-#include "radix_sort.h"
-#include "bubble_sort.h"
+#include "all.h" // importing all sorting functions
 using namespace std;
 
-int main() {
+void test() {
 
-    vector<int> const test_arr = {3,6,7,2,4,90,43,103,2,30234,56,5,3,2,76,43,34,102,9};
+    vector<int> const test_arr {3,6,7,2,4,90,43,103,2,30234,56,5,3,2,76,43,34,102,9};
     cout << endl << "Unsorted test array:\t";
     print_array(test_arr);
 
@@ -54,7 +45,7 @@ int main() {
 
     // Radix sort test
     vector<int> test_arr_radix_sort = test_arr;
-    radix_sort(test_arr_radix_sort, test_arr_radix_sort.size());
+    radix_sort(test_arr_radix_sort);
     cout << "Radix sort test:\t\t";
     print_array(test_arr_radix_sort);
 
@@ -64,5 +55,4 @@ int main() {
     cout << "Bubble sort test:\t\t";
     print_array(test_arr_bubble_sort);
 
-    return 0;
 }
