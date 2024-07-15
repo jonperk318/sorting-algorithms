@@ -35,7 +35,7 @@ function heapSort(arr) // main function
     for (let i = Math.floor(n / 2) - 1; i >= 0; i--)  // build max heap
         heapify(arr, n, i);
 
-    for (i = n - 1; i > 0; i--) { // extract elements one by one
+    for (let i = n - 1; i > 0; i--) { // extract elements one by one
         [arr[i], arr[0]] = [arr[0], arr[i]];
         heapify(arr, i, 0);
     }

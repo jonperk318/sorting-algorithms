@@ -10,11 +10,19 @@ const bubbleSort = require("./bubble-sort.js");
 let testArr = [3, 6, 7, 2, 4, 90, 43, 103, 2, 30234, 56, 5, 3, 2, 76, 43, 34, 102, 9]
 
 console.log("\nUnsorted test array:\t", ...testArr);
-console.log("Insertion sort test:\t", ...insertionSort(testArr));
-console.log("Merge sort test:\t", ...mergeSort(testArr));
-console.log("Quick sort test:\t", ...quickSort(testArr, 0, testArr.length - 1));
-console.log("Selection sort test:\t", ...selectionSort(testArr));
-console.log("Heap sort test:\t\t", ...heapSort(testArr));
-console.log("Counting sort test:\t", ...countingSort(testArr));
-console.log("Radix sort test:\t", ...radixSort(testArr));
-console.log("Bubble sort test:\t", ...bubbleSort(testArr));
+let testArrInsertionSort = testArr.slice();
+console.log("Insertion sort test:\t", ...insertionSort(testArrInsertionSort));
+let testArrMergeSort = testArr.slice();
+console.log("Merge sort test:\t", ...mergeSort(testArrMergeSort));
+let testArrQuickSort = testArr.slice();
+console.log("Quick sort test:\t", ...quickSort(testArrQuickSort, 0, testArrQuickSort.length - 1));
+let testArrSelectionSort = testArr.slice();
+console.log("Selection sort test:\t", ...selectionSort(testArrSelectionSort));
+let testArrHeapSort = testArr.slice();
+console.log("Heap sort test:\t\t", ...heapSort(testArrHeapSort));
+let testArrCountingSort = testArr.slice();
+console.log("Counting sort test:\t", ...countingSort(testArrCountingSort));
+let testArrRadixSort = testArr.slice();
+console.log("Radix sort test:\t", ...radixSort(testArrRadixSort));
+let testArrBubbleSort = testArr.slice();
+console.log("Bubble sort test:\t", ...bubbleSort(testArrBubbleSort));

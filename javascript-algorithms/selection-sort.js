@@ -15,15 +15,15 @@ function selectionSort(arr) {
 
     for (let i = 0; i < n - 1; i++)
     {
+        let minIdx = i; // minimum unsorted element index
 
-        let min_idx = i; // minimum unsorted element index
-        for (let j = i + 1; j < n; j++)
-            if (arr[j] < arr[min_idx]) // if minimum unsorted index is greater than current index
-                min_idx = j; // minimum index becomes that index
-
-        [arr[min_idx], arr[i]] = [arr[min_idx], arr[i]]; // swap values
+        for (let j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIdx]) { // if minimum unsorted index is greater than current index
+                minIdx = j; // minimum index becomes that index
+                }
+        }
+        [arr[minIdx], arr[i]] = [arr[i], arr[minIdx]]; // swap values
     }
-
     return arr;
 }
 

@@ -109,7 +109,7 @@ int main() {
         // Selection sort
         vector<int> s4 = sample;
         tick = chrono::high_resolution_clock::now();
-        insertion_sort(s4);
+        selection_sort(s4);
         tock = chrono::high_resolution_clock::now();
         duration = double(duration_cast<chrono::nanoseconds>(tock - tick).count());
         selection_times.push_back(duration / 1000000000);
@@ -125,7 +125,7 @@ int main() {
         // Counting sort
         vector<int> s6 = sample;
         tick = chrono::high_resolution_clock::now();
-        insertion_sort(s6);
+        counting_sort(s6);
         tock = chrono::high_resolution_clock::now();
         duration = double(duration_cast<chrono::nanoseconds>(tock - tick).count());
         counting_times.push_back(duration / 1000000000);
