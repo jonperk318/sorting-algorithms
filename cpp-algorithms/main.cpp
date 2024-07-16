@@ -157,7 +157,7 @@ int main() {
 
     for (int i = 0; i < sorting_times.size(); i++) {
 
-        ofstream output_file("../cpp-sorting-times/cpp-" + sorting_names[i] + ".txt");
+        ofstream output_file("../cpp-sorting-times/cpp-" + sorting_names[i] + "-times.txt");
 
         if (output_file.is_open()) {
 

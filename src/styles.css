@@ -1,3 +1,19 @@
+:root {
+    --yellow: #ffb381;
+    --light-orange: #ff8a01;
+    --dark-orange: #ff5558;
+    --lavender: #bd9fd1;
+    --lilac: #815288;
+    --purple: #390f37;
+    --indigo: #3a4e9e;
+    --blue: #01308a;
+    --oxford-blue: #0a162c;
+    --space-cadet: #282d40;
+    --davys-gray: #4a495a;
+    --taupe: #83828b;
+    --silver: #bcbcbc;
+}
+
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
@@ -23,25 +39,25 @@ a, a:visited, a:active {
     padding-left: 15px;
 }
 
-.menu ul#suitesMenu {
+.menu ul#sectionMenu {
     margin: 20px 0 0 0;
     padding: 0;
 }
 
-.menu ul#suitesMenu li {
+.menu ul#sectionMenu li {
     list-style-type: none;
     padding: 15px;
     font-size: 14px;
 }
 
-.menu ul#suitesMenu li.selected,
-.menu ul#suitesMenu li.selected:hover {
+.menu ul#sectionMenu li.selected,
+.menu ul#sectionMenu li.selected:hover {
     background-color: #222;
     color: #fff;
     cursor: default;
 }
 
-.menu ul#suitesMenu li:hover {
+.menu ul#sectionMenu li:hover {
     background-color: #e0e0e0;
     cursor: pointer;
     color: #000;

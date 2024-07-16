@@ -1,10 +1,10 @@
-var Chart = require("./chart.js");
-var Menu = require("./section-menu.js");
+const Chart = require("./sorting-chart.js");
+const Menu = require("./section-menu.js");
 
 Menu.renderMenu();
-var sortChart = Chart.renderChart();
+const sortingChart = Chart.renderChart();
 
 window.addEventListener("hashchange", function() {
     Menu.renderMenu();
-    Chart.updateChart(sortChart);
+    Chart.updateChart(sortingChart);
 });

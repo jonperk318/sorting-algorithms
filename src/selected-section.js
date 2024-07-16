@@ -3,15 +3,15 @@
  *
  * @returns {Number}
  */
-function getSelectedChartIndex() {
+function getSelectedSectionIndex() {
 
-    var selectedChartIndex = parseInt(window.location.hash.substring(1).split("/")[0]);
-    
-    if(!selectedChartIndex) {
-        selectedChartIndex = 0;
+    let selectedSectionIndex = parseInt(window.location.hash.substring(1).split("/")[0]);
+
+    if(!selectedSectionIndex) {
+        selectedSectionIndex = 0;
     }
 
-    return selectedChartIndex;
+    return selectedSectionIndex;
 }
 
-module.exports = getSelectedChartIndex;
+module.exports.getSelectedSectionIndex = getSelectedSectionIndex;

@@ -1,5 +1,5 @@
 /**
- * Map sorting methods and programming languages to colors
+ * Mapping sorting methods and programming languages to colors
  *
  * @param name language or sorting method name
  * @returns {string} color
@@ -21,6 +21,7 @@ function getColor(name) {
         java: "#b07219",
         cpp: "#f34b7d",
         javaScript: "#f1e05a",
+
         other: "#83828b"
 
     };
@@ -30,4 +31,4 @@ function getColor(name) {
     return color ? color : colors["other"];
 }
 
-module.exports = getColor;
+module.exports.getColor = getColor;

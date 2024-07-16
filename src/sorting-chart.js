@@ -29,20 +29,20 @@ function sectionResultsToData() {
  */
 function mapSectionMethodsToDataSet(sectionResults) {
 
-    var methodTimes = sectionResults.reduce(function(methods, result) {
+    const methodTimes = sectionResults.reduce(function (methods, result) {
 
-        for(var methodName in result.methods) {
+        for (let methodName in result.methods) {
             methods[methodName] = methods[methodName] || [];
             methods[methodName].push(result.methods[methodName]);
         }
         return methods;
     }, {});
 
-    var dataSets = [];
+    const dataSets = [];
 
-    for(var methodName in methodTimes) {
+    for(const methodName in methodTimes) {
 
-        var color = Color.getColor(methodName);
+        const color = Color.getColor(methodName);
 
         dataSets.push({
             label: methodName,
@@ -63,7 +63,8 @@ function mapSectionMethodsToDataSet(sectionResults) {
  * Render chart to display section results
  */
 function renderChart() {
-    var ctx = document.getElementById("sortChart").getContext('2d');
+
+    const ctx = document.getElementById("sortingChart").getContext('2d');
 
     return new Chart(ctx, {
         type: 'line',
@@ -117,5 +118,5 @@ function updateChart(chart) {
     chart.update();
 }
 
-module.exports = renderChart;
-module.exports = updateChart;
+module.exports.renderChart = renderChart;
+module.exports.updateChart = updateChart;
