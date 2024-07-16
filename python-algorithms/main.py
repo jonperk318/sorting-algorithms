@@ -10,6 +10,8 @@ import time
 
 current_dir = os.path.dirname(__file__) # ensure script reads files from correct directory
 ss_file_path = os.path.join(current_dir, "../samples/sample-sizes.txt")
+
+# get sizes of sample arrays
 with open(ss_file_path, "r") as file:
     sample_sizes = file.read()
 sample_sizes = sample_sizes.split(",")
@@ -23,20 +25,20 @@ for size in sample_sizes: # Create a list of lists of input samples
 
     r_file_path = os.path.join(current_dir, "../samples/" + str(size) + ".txt")
     with open(r_file_path, "r") as file:
-        input = file.read()
-    input = input.split(",")
-    if input[-1] == "": # if last value in array is empty, remove it
-        input.pop()
-    input = [eval(i) for i in input] # get int from string
+        sample = file.read()
+    sample = sample.split(",")
+    if sample[-1] == "": # if last value in array is empty, remove it
+        sample.pop()
+    sample = [eval(i) for i in sample] # get int from string
 
-    samples.append(input)
+    samples.append(sample)
 
 (insertion_times, selection_times, merge_times, quick_times,
  heap_times, counting_times, radix_times, bubble_times) = [], [], [], [], [], [], [], []
 
 count = 0
 
-for sample in samples: # run all sorting functions
+for sample in samples: # RUN ALL SORTING FUNCTIONS
 
     # Insertion sort
     s1 = list(sample)
