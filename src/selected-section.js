@@ -4,9 +4,7 @@
  * @returns {Number}
  */
 function getSelectedSectionIndex() {
-
-    let selectedSectionIndex = parseInt(window.location.hash.substring(1).split("/")[0]);
-
+    var selectedSectionIndex = parseInt(window.location.hash.substring(1).split("/")[0]);
     if(!selectedSectionIndex) {
         selectedSectionIndex = 0;
     }

@@ -6,7 +6,7 @@
  */
 function getColor(name) {
 
-    const colors = {
+    var colors = {
 
         insertionSort: "#ffb381",
         mergeSort: "#ff8a01",
@@ -26,7 +26,7 @@ function getColor(name) {
 
     };
 
-    const color = colors[name];
+    var color = colors[name];
 
     return color ? color : colors["other"];
 }

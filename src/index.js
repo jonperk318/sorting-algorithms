@@ -1,8 +1,8 @@
-const Chart = require("./sorting-chart.js");
-const Menu = require("./section-menu.js");
+var Chart = require("./sorting-chart");
+var Menu = require("./section-menu");
 
 Menu.renderMenu();
-const sortingChart = Chart.renderChart();
+var sortingChart = Chart.renderChart();
 
 window.addEventListener("hashchange", function() {
     Menu.renderMenu();

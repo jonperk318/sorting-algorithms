@@ -1,18 +1,18 @@
-const SelectedSection = require("./selected-section.js");
+var SelectedSection = require("./selected-section");
 
 /**
  * Render section menu.
  */
 function renderMenu() {
-    const menuElement = document.getElementById("sectionMenu");
+    var menuElement = document.getElementById("sectionMenu");
     menuElement.innerHTML = "";
 
-    const selectedSectionIndex = SelectedSection.getSelectedSectionIndex();
+    var selectedSectionIndex = SelectedSection.getSelectedSectionIndex();
 
-    for(let i = 0; i < window.results.length; i++) {
-        const sectionName = window.results[i].name;
+    for(var i = 0; i < window.results.length; i++) {
+        var sectionName = window.results[i].name;
 
-        const li = document.createElement("li");
+        var li = document.createElement("li");
         li.innerHTML = sectionName;
 
         if(i === selectedSectionIndex) {

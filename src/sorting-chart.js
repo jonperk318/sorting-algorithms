@@ -1,15 +1,14 @@
-const Chart = require("chart.js");
-const Color = require("./colormap.js");
-const SelectedSection = require("./selected-section.js");
+var Chart = require("chart.js");
+var Color = require("./colormap.js");
+var SelectedSection = require("./selected-section.js");
 
 /**
- * Map section results to chart.js data format
+ * Map section results to Chart.js data format
  *
  * @returns {labels, datasets}
  */
 function sectionResultsToData() {
-
-    const section = window.results[SelectedSection.getSelectedSectionIndex()];
+    var section = window.results[SelectedSection.getSelectedSectionIndex()];
 
     return {
         labels: section.results.map(function(result) {
@@ -22,27 +21,23 @@ function sectionResultsToData() {
 }
 
 /**
- * Map every section method result to chart.js dataset format
+ * Map every section method result to Chart.js dataset format
  *
- * @param sectionResults
+ * @param sectionResults section results
  * @returns {Array} datasets
  */
 function mapSectionMethodsToDataSet(sectionResults) {
-
-    const methodTimes = sectionResults.reduce(function (methods, result) {
-
-        for (let methodName in result.methods) {
+    var methodTimes = sectionResults.reduce(function(methods, result) {
+        for(var methodName in result.methods) {
             methods[methodName] = methods[methodName] || [];
             methods[methodName].push(result.methods[methodName]);
         }
         return methods;
     }, {});
 
-    const dataSets = [];
-
-    for(const methodName in methodTimes) {
-
-        const color = Color.getColor(methodName);
+    var dataSets = [];
+    for(var methodName in methodTimes) {
+        var color = Color.getColor(methodName);
 
         dataSets.push({
             label: methodName,
@@ -63,8 +58,7 @@ function mapSectionMethodsToDataSet(sectionResults) {
  * Render chart to display section results
  */
 function renderChart() {
-
-    const ctx = document.getElementById("sortingChart").getContext('2d');
+    var ctx = document.getElementById("sortChart").getContext('2d');
 
     return new Chart(ctx, {
         type: 'line',

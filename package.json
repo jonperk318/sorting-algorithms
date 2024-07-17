@@ -3,20 +3,25 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "dev": "parcel dist/index.html",
+    "build": "parcel build dist/index.html"
   },
   "devDependencies": {
-    "parcel": "^2.6.2"
+    "parcel": "^2.6.2",
+    "webpack-cli": "^5.1.4",
+    "chart.js": "^4.4.3",
+    "webpack": "^5.93.0"
   },
   "dependencies": {
     "@cubejs-client/core": "^0.31.0",
     "benchmark": "^2.1.4",
-    "chart.js": "^4.0.0"
+    "chart.js": "^4.0.0",
+    "lodash": "^4.17.21"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jonperk318/sorting-functions.git"
   },
-  "private": true
+  "private": true,
+  "main": "./src/index.js"
 }
