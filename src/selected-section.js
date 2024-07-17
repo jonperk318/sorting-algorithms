@@ -1,15 +1,15 @@
 /**
- * Parse window.location.hash to get the current section index
+ * Parse window.location.hash, get current suite index
  *
  * @returns {Number}
  */
-function getSelectedSectionIndex() {
-    var selectedSectionIndex = parseInt(window.location.hash.substring(1).split("/")[0]);
-    if(!selectedSectionIndex) {
-        selectedSectionIndex = 0;
+function getSelectedSuiteIndex() {
+    var selectedSuiteIndex = parseInt(window.location.hash.substring(1).split("/")[0]);
+    if(!selectedSuiteIndex) {
+        selectedSuiteIndex = 0;
     }
 
-    return selectedSectionIndex;
+    return selectedSuiteIndex;
 }
 
-module.exports.getSelectedSectionIndex = getSelectedSectionIndex;
+module.exports.getSelectedSuiteIndex = getSelectedSuiteIndex;

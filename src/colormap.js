@@ -1,13 +1,11 @@
 /**
- * Mapping sorting methods and programming languages to colors
+ * Map sort method name to fixed color
  *
- * @param name language or sorting method name
+ * @param sortName sort name
  * @returns {string} color
  */
-function getColor(name) {
-
+function getColor(sortName) {
     var colors = {
-
         insertionSort: "#ffb381",
         mergeSort: "#ff8a01",
         quickSort: "#ff5558",
@@ -23,10 +21,9 @@ function getColor(name) {
         javaScript: "#f1e05a",
 
         other: "#83828b"
-
     };
 
-    var color = colors[name];
+    var color = colors[sortName];
 
     return color ? color : colors["other"];
 }

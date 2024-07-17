@@ -1,29 +1,29 @@
-var SelectedSection = require("./selected-section");
+var SelectedSuite = require("./selected-section");
 
 /**
- * Render section menu.
+ * Render suites menu.
  */
 function renderMenu() {
-    var menuElement = document.getElementById("sectionMenu");
+    var menuElement = document.getElementById("suitesMenu");
     menuElement.innerHTML = "";
 
-    var selectedSectionIndex = SelectedSection.getSelectedSectionIndex();
+    var selectedSuiteIndex = SelectedSuite.getSelectedSuiteIndex();
 
     for(var i = 0; i < window.results.length; i++) {
-        var sectionName = window.results[i].name;
+        var suiteName = window.results[i].name;
 
         var li = document.createElement("li");
-        li.innerHTML = sectionName;
+        li.innerHTML = suiteName;
 
-        if(i === selectedSectionIndex) {
+        if(i === selectedSuiteIndex) {
             li.className = "selected";
         }
 
-        (function(sectionName, index) {
+        (function(suiteName, index) {
             li.onclick = function () {
-                window.location.hash = index + "/" + sectionName.replace(/ /g, "-")
+                window.location.hash = index + "/" + suiteName.replace(/ /g, "-")
             };
-        })(sectionName, i);
+        })(suiteName, i);
 
         menuElement.appendChild(li);
     }

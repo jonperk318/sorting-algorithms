@@ -1,33 +1,37 @@
 var Chart = require("chart.js");
-var Color = require("./colormap.js");
-var SelectedSection = require("./selected-section.js");
+var Color = require("./colormap");
+var SelectedSuite = require("./selected-section");
+
+Chart.defaults.global.defaultFontColor = "#bcbcbc";
+Chart.defaults.global.borderColor = "#83828b";
+Chart.defaults.global.defaultFontFamily = "Verdana, sans-serif";
 
 /**
- * Map section results to Chart.js data format
+ * Map suite results to Chart.js data format
  *
  * @returns {labels, datasets}
  */
-function sectionResultsToData() {
-    var section = window.results[SelectedSection.getSelectedSectionIndex()];
+function suiteResultsToData() {
+    var suite = window.results[SelectedSuite.getSelectedSuiteIndex()];
 
     return {
-        labels: section.results.map(function(result) {
+        labels: suite.results.map(function(result) {
             return result.array;
         }),
-        datasets: mapSectionMethodsToDataSet(section.results).sort(function(dataset1, dataset2) {
+        datasets: mapSuiteMethodsToDataSet(suite.results).sort(function(dataset1, dataset2) {
             return dataset1.totalTime > dataset2.totalTime;
         })
     }
 }
 
 /**
- * Map every section method result to Chart.js dataset format
+ * Map every suite method result to Chart.js dataset format
  *
- * @param sectionResults section results
+ * @param suiteResults suite results
  * @returns {Array} datasets
  */
-function mapSectionMethodsToDataSet(sectionResults) {
-    var methodTimes = sectionResults.reduce(function(methods, result) {
+function mapSuiteMethodsToDataSet(suiteResults) {
+    var methodTimes = suiteResults.reduce(function(methods, result) {
         for(var methodName in result.methods) {
             methods[methodName] = methods[methodName] || [];
             methods[methodName].push(result.methods[methodName]);
@@ -47,7 +51,7 @@ function mapSectionMethodsToDataSet(sectionResults) {
                 return total + time;
             }, 0),
             borderColor: color,
-            backgroundColor: color
+            backgroundColor: color,
         });
     }
 
@@ -55,14 +59,14 @@ function mapSectionMethodsToDataSet(sectionResults) {
 }
 
 /**
- * Render chart to display section results
+ * Render chart to display suite results
  */
 function renderChart() {
     var ctx = document.getElementById("sortChart").getContext('2d');
 
     return new Chart(ctx, {
         type: 'line',
-        data: sectionResultsToData(),
+        data: suiteResultsToData(),
         options: {
             responsive: true,
             maintainAspectRatio: false,
@@ -86,29 +90,55 @@ function renderChart() {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        fontSize: 12
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Time (sec)'
+                        labelString: 'Time (seconds)',
+                        fontSize: 30
+                    },
+                    type: 'logarithmic',
+                    gridLines: {
+                        display: true,
+                        color: "#4a495a"
                     }
                 }],
                 xAxes: [{
+                    ticks: {
+                        fontSize: 12
+                    },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Array Size (elements)'
+                        labelString: 'Array Size (number of elements)',
+                        fontSize: 30
+                    },
+                    gridLines: {
+                        display: true,
+                        color: "#4a495a"
                     }
                 }]
             },
             layout: {
-                padding: 10
+                padding: 5
+            },
+            legend: {
+                display: true,
+                position: 'top',
+                labels: {
+                    padding: 35,
+                    usePointStyle: true,
+                    pointStyle: 'circle',
+                    pointStyleWidth: 20,
+                    fontSize: 15
+                }
             }
         }
     });
 }
 
 function updateChart(chart) {
-    chart.data = sectionResultsToData();
+    chart.data = suiteResultsToData();
     chart.update();
 }
 

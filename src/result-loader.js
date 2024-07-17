@@ -13,7 +13,7 @@ let sampleSizes = sampleSizesStrings.map(Number);
 let sortingNames = ["insertion-sort", "merge-sort", "quick-sort", "selection-sort",
     "heap-sort", "counting-sort", "radix-sort", "bubble-sort"];
 let sortingNamesCC = ["insertionSort", "mergeSort", "quickSort", "selectionSort", "heapSort",
-    "countingSort", "radix-sort", "bubbleSort"];
+    "countingSort", "radixSort", "bubbleSort"];
 pythonTimes = [];
 javaTimes = [];
 cppTimes = [];
@@ -76,7 +76,6 @@ for (let i = 0; i < languageNames.length; i++) { // 4 languages
         for (let k = 0; k < sortingNamesCC.length; k++) { // 8 sorting functions
 
             resultsPerSampleSize[sortingNamesCC[k]] = times[i][k][j];
-            //resultsPerSampleSize[sortingNamesCC[k]].push(times[i][k][j]);
 
         }
         results.push({"array":sampleSizes[j], "methods":resultsPerSampleSize});
@@ -99,7 +98,6 @@ for (let i = 0; i < sortingNamesDisplay.length; i++) { // 8 sorting functions
         for (let k = 0; k < languageNamesCC.length; k++) { // 4 languages
 
             resultsPerSampleSize[languageNamesCC[k]] = times[k][i][j];
-            //resultsPerSampleSize[languageNamesCC[k]].push(times[k][i][j]);
 
         }
         results.push({"array":sampleSizes[j], "methods":resultsPerSampleSize});
@@ -110,7 +108,7 @@ for (let i = 0; i < sortingNamesDisplay.length; i++) { // 8 sorting functions
 }
 
 let args = process.argv.slice(2);
-let resultsFilePath = args[0] || "./results.js";
+let resultsFilePath = args[0] || "../dist/results.js";
 
 /**
  * Save generated results as results.js

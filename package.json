@@ -1,27 +1,12 @@
 {
   "name": "sorting-algorithms",
   "version": "1.0.0",
-  "license": "MIT",
+  "author": "Jonathan Perkins",
   "scripts": {
-    "dev": "parcel dist/index.html",
-    "build": "parcel build dist/index.html"
+    "build-site": "webpack -p"
   },
   "devDependencies": {
-    "parcel": "^2.6.2",
-    "webpack-cli": "^5.1.4",
-    "chart.js": "^4.4.3",
+    "chart.js": "^2.6.0",
     "webpack": "^5.93.0"
-  },
-  "dependencies": {
-    "@cubejs-client/core": "^0.31.0",
-    "benchmark": "^2.1.4",
-    "chart.js": "^4.0.0",
-    "lodash": "^4.17.21"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jonperk318/sorting-functions.git"
-  },
-  "private": true,
-  "main": "./src/index.js"
+  }
 }

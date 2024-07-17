@@ -17,17 +17,23 @@
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
+    background-color: var(--space-cadet);
+    color: var(--silver);
+}
+
+a {
+    text-decoration: none;
 }
 
 a, a:visited, a:active {
-    color: #267CB9;
+    color: var(--lavender);
 }
 
 .menu {
     position: absolute;
     width: 300px;
     min-height: 100%;
-    background-color: #f0f0f0;
+    background-color: var(--oxford-blue);
     z-index: 100;
 }
 
@@ -39,37 +45,37 @@ a, a:visited, a:active {
     padding-left: 15px;
 }
 
-.menu ul#sectionMenu {
+.menu ul#suitesMenu {
     margin: 20px 0 0 0;
     padding: 0;
 }
 
-.menu ul#sectionMenu li {
+.menu ul#suitesMenu li {
     list-style-type: none;
     padding: 15px;
     font-size: 14px;
 }
 
-.menu ul#sectionMenu li.selected,
-.menu ul#sectionMenu li.selected:hover {
+.menu ul#suitesMenu li.selected,
+.menu ul#suitesMenu li.selected:hover {
     background-color: #222;
-    color: #fff;
+    color: var(--silver);
     cursor: default;
 }
 
-.menu ul#sectionMenu li:hover {
-    background-color: #e0e0e0;
+.menu ul#suitesMenu li:hover {
+    background-color: var(--silver);
     cursor: pointer;
-    color: #000;
+    color: var(--oxford-blue);
 }
 
-.container {
+.page {
     height: 80%;
     width: 100%;
     position: fixed;
 }
 
-.container .section {
+.page .suite {
     min-width: 600px;
     min-height: 300px;
     padding: 20px;
