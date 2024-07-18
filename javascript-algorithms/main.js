@@ -7,6 +7,7 @@ const countingSort = require("./counting-sort.js");
 const radixSort = require("./radix-sort.js");
 const bubbleSort = require("./bubble-sort.js");
 const fs = require("fs");
+const now = require('nano-time');
 
 // get sizes of sample arrays
 let sampleSizesText = fs.readFileSync("../samples/sample-sizes.txt", "utf-8");
@@ -33,59 +34,59 @@ for (let i = 0; i < samples.length; i++) {
 
     // Insertion sort
     let s1 = samples[i].slice();
-    let tick = Date.now();
+    let tick = process.hrtime();
     insertionSort(s1);
-    let tock = Date.now();
-    insertionTimes.push((tock - tick) / 1000);
+    let tock = process.hrtime(tick);
+    insertionTimes.push(tock[0] + tock[1]/1000000000);
 
     // Merge sort
     let s2 = samples[i].slice();
-    tick = Date.now();
+    tick = process.hrtime();
     mergeSort(s2);
-    tock = Date.now();
-    mergeTimes.push((tock - tick) / 1000);
+    tock = process.hrtime(tick);
+    mergeTimes.push(tock[0] + tock[1]/1000000000);
 
     // Quick sort
     let s3 = samples[i].slice();
-    tick = Date.now();
+    tick = process.hrtime();
     quickSort(s3, 0, s3.length - 1);
-    tock = Date.now();
-    quickTimes.push((tock - tick) / 1000);
+    tock = process.hrtime(tick);
+    quickTimes.push(tock[0] + tock[1]/1000000000);
 
     // Selection sort
     let s4 = samples[i].slice();
-    tick = Date.now();
+    tick = process.hrtime();
     selectionSort(s4);
-    tock = Date.now();
-    selectionTimes.push((tock - tick) / 1000);
+    tock = process.hrtime(tick);
+    selectionTimes.push(tock[0] + tock[1]/1000000000);
 
     // Heap sort
     let s5 = samples[i].slice();
-    tick = Date.now();
+    tick = process.hrtime();
     heapSort(s5);
-    tock = Date.now();
-    heapTimes.push((tock - tick) / 1000);
+    tock = process.hrtime(tick);
+    heapTimes.push(tock[0] + tock[1]/1000000000);
 
     // Counting sort
     let s6 = samples[i].slice();
-    tick = Date.now();
+    tick = process.hrtime();
     countingSort(s6);
-    tock = Date.now();
-    countingTimes.push((tock - tick) / 1000);
+    tock = process.hrtime(tick);
+    countingTimes.push(tock[0] + tock[1]/1000000000);
 
     // Radix sort
     let s7 = samples[i].slice();
-    tick = Date.now();
+    tick = process.hrtime();
     radixSort(s7);
-    tock = Date.now();
-    radixTimes.push((tock - tick) / 1000);
+    tock = process.hrtime(tick);
+    radixTimes.push(tock[0] + tock[1]/1000000000);
 
     // Bubble sort
     let s8 = samples[i].slice();
-    tick = Date.now();
+    tick = process.hrtime();
     bubbleSort(s8);
-    tock = Date.now();
-    bubbleTimes.push((tock - tick) / 1000);
+    tock = process.hrtime(tick);
+    bubbleTimes.push(tock[0] + tock[1]/1000000000);
 
     console.log("Sorted array of length " + sampleSizes[i]);
 

@@ -91,12 +91,12 @@ function renderChart() {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        fontSize: 12
+                        fontSize: 10
                     },
                     scaleLabel: {
                         display: true,
                         labelString: 'Time (seconds)',
-                        fontSize: 30
+                        fontSize: 20
                     },
                     type: 'logarithmic',
                     gridLines: {
@@ -106,12 +106,12 @@ function renderChart() {
                 }],
                 xAxes: [{
                     ticks: {
-                        fontSize: 12
+                        fontSize: 10
                     },
                     scaleLabel: {
                         display: true,
                         labelString: 'Array Size (number of elements)',
-                        fontSize: 30
+                        fontSize: 20
                     },
                     gridLines: {
                         display: true,
@@ -126,11 +126,11 @@ function renderChart() {
                 display: true,
                 position: 'top',
                 labels: {
-                    padding: 35,
+                    padding: 25,
                     usePointStyle: true,
                     pointStyle: 'circle',
-                    pointStyleWidth: 20,
-                    fontSize: 15
+                    pointStyleWidth: 15,
+                    fontSize: 12
                 }
             }
         }
