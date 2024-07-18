@@ -82,7 +82,3 @@ a, a:visited, a:active {
     height:100%;
     margin-left: 300px;
 }
-
-.suite {
-    border: 2px solid var(--lavender);
-}
