@@ -1,17 +1,16 @@
 :root {
-    --yellow: #ffb381;
-    --light-orange: #ff8a01;
-    --dark-orange: #ff5558;
-    --lavender: #bd9fd1;
-    --lilac: #815288;
-    --purple: #390f37;
-    --indigo: #3a4e9e;
-    --blue: #01308a;
-    --oxford-blue: #0a162c;
-    --space-cadet: #282d40;
-    --davys-gray: #4a495a;
-    --taupe: #83828b;
-    --silver: #bcbcbc;
+    --yellow: #EFCA00;
+    --salmon: #FE433C;
+    --watermelon: #F31D64;
+    --lilac: #A224AD;
+    --purple: #6A38B3;
+    --blue: #3C5081;
+    --light-blue: #0095EF;
+    --black: #0F1416;
+    --space-cadet: #282D40;
+    --davys-gray: #4A495A;
+    --taupe: #83828B;
+    --silver: #BCBCBC;
 }
 
 body {
@@ -26,14 +25,14 @@ a {
 }
 
 a, a:visited, a:active {
-    color: var(--lavender);
+    color: var(--purple);
 }
 
 .menu {
     position: fixed;
     width: 300px;
     min-height: 100%;
-    background-color: var(--oxford-blue);
+    background-color: var(--black);
     z-index: 1000;
 }
 
@@ -58,15 +57,15 @@ a, a:visited, a:active {
 
 .menu ul#suitesMenu li.selected,
 .menu ul#suitesMenu li.selected:hover {
-    background-color: var(--lavender);
-    color: var(--space-cadet);
+    background-color: var(--purple);
+    color: var(--silver);
     cursor: default;
 }
 
 .menu ul#suitesMenu li:hover {
-    background-color: var(--silver);
+    background-color: var(--lilac);
     cursor: pointer;
-    color: var(--oxford-blue);
+    color: var(--black);
 }
 
 .page {
