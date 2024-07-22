@@ -15,14 +15,13 @@ public class Main {
 
         Utils.printArray(samples.getFirst());
 
-        // run all sorting functions
         ArrayList<Double> insertionTimes = new ArrayList<>(), mergeTimes = new ArrayList<>(),
                 quickTimes = new ArrayList<>(), selectionTimes = new ArrayList<>(), heapTimes = new ArrayList<>(),
                 countingTimes = new ArrayList<>(), radixTimes = new ArrayList<>(), bubbleTimes = new ArrayList<>();
-        long tick, tock;
+        double tick, tock;
         int count = 0;
 
-        for (ArrayList<Integer> sample : samples) {
+        for (ArrayList<Integer> sample : samples) { // RUN ALL SORTING FUNCTIONS
 
             // Insertion sort
             ArrayList<Integer> testArrInsertionSort = new ArrayList<Integer>(sample);
@@ -30,7 +29,7 @@ public class Main {
             tick = System.nanoTime();
             insertionSort.sort(testArrInsertionSort);
             tock = System.nanoTime();
-            insertionTimes.add((double) (tock - tick) / 1_000_000_000);
+            insertionTimes.add((tock - tick) / 1_000_000_000);
 
             // Merge sort
             ArrayList<Integer> testArrMergeSort = new ArrayList<Integer>(sample);
@@ -38,7 +37,7 @@ public class Main {
             tick = System.nanoTime();
             mergeSort.sort(testArrMergeSort, 0, testArrMergeSort.size() - 1);
             tock = System.nanoTime();
-            mergeTimes.add((double) (tock - tick) / 1_000_000_000);
+            mergeTimes.add((tock - tick) / 1_000_000_000);
 
             // Quick sort
             ArrayList<Integer> testArrQuickSort = new ArrayList<Integer>(sample);
@@ -46,7 +45,7 @@ public class Main {
             tick = System.nanoTime();
             quickSort.sort(testArrQuickSort, 0, testArrQuickSort.size() - 1);
             tock = System.nanoTime();
-            quickTimes.add((double) (tock - tick) / 1_000_000_000);
+            quickTimes.add((tock - tick) / 1_000_000_000);
 
             // Selection sort
             ArrayList<Integer> testArrSelectionSort = new ArrayList<Integer>(sample);
@@ -54,7 +53,7 @@ public class Main {
             tick = System.nanoTime();
             selectionSort.sort(testArrSelectionSort);
             tock = System.nanoTime();
-            selectionTimes.add((double) (tock - tick) / 1_000_000_000);
+            selectionTimes.add((tock - tick) / 1_000_000_000);
 
             // Heap sort
             ArrayList<Integer> testArrHeapSort = new ArrayList<Integer>(sample);
@@ -62,21 +61,21 @@ public class Main {
             tick = System.nanoTime();
             heapSort.sort(testArrHeapSort);
             tock = System.nanoTime();
-            heapTimes.add((double) (tock - tick) / 1_000_000_000);
+            heapTimes.add((tock - tick) / 1_000_000_000);
 
             // Counting sort
             ArrayList<Integer> testArrCountingSort = new ArrayList<Integer>(sample);
             tick = System.nanoTime();
             CountingSort.sort(testArrCountingSort);
             tock = System.nanoTime();
-            countingTimes.add((double) (tock - tick) / 1_000_000_000);
+            countingTimes.add((tock - tick) / 1_000_000_000);
 
             // Radix sort
             ArrayList<Integer> testArrRadixSort = new ArrayList<Integer>(sample);
             tick = System.nanoTime();
             selectionSort.sort(testArrRadixSort);
             tock = System.nanoTime();
-            radixTimes.add((double) (tock - tick) / 1_000_000_000);
+            radixTimes.add((tock - tick) / 1_000_000_000);
 
             // Bubble sort
             ArrayList<Integer> testArrBubbleSort = new ArrayList<Integer>(sample);
@@ -84,7 +83,7 @@ public class Main {
             tick = System.nanoTime();
             bubbleSort.sort(testArrBubbleSort);
             tock = System.nanoTime();
-            bubbleTimes.add((double) (tock - tick) / 1_000_000_000);
+            bubbleTimes.add((tock - tick) / 1_000_000_000);
 
             System.out.println("Sorted array of length: " + sampleSizes.get(count));
             count ++;

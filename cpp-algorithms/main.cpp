@@ -22,7 +22,7 @@ int main() {
     // Uncomment to run test
     // test();
 
-    // get sizes of sample arrayas
+    // get sizes of sample arrays
 
     ifstream sample_sizes_file("../../samples/sample-sizes.txt");
     if (!sample_sizes_file.is_open()) { // there should be no error opening the file

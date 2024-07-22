@@ -23,6 +23,4 @@ print("Counting sort test:\t" + str(counting_sort(test_arr_counting_sort)))
 test_arr_radix_sort = list(test_arr)
 print("Radix sort test:\t" + str(radix_sort(test_arr_radix_sort)))
 test_arr_bubble_sort = list(test_arr)
-print("Bubble sort test:\t" + str(bubble_sort(test_arr_bubble_sort)))
-
-print("\n")
+print("Bubble sort test:\t" + str(bubble_sort(test_arr_bubble_sort)) + "\n")

@@ -48,23 +48,23 @@ for sample in samples: # RUN ALL SORTING FUNCTIONS
     insertion_times.append(tock - tick)
 
     # Merge sort
-    s3 = list(sample)
+    s2 = list(sample)
     tick = time.perf_counter()
-    merge_sort(s3)
+    merge_sort(s2)
     tock = time.perf_counter()
     merge_times.append(tock - tick)
 
     # Quick sort
-    s4 = list(sample)
+    s3 = list(sample)
     tick = time.perf_counter()
-    quick_sort(s4, 0, len(s4) - 1)
+    quick_sort(s3, 0, len(s3) - 1)
     tock = time.perf_counter()
     quick_times.append(tock - tick)
 
     # Selection sort
-    s2 = list(sample)
+    s4 = list(sample)
     tick = time.perf_counter()
-    selection_sort(s2)
+    selection_sort(s4)
     tock = time.perf_counter()
     selection_times.append(tock - tick)
 

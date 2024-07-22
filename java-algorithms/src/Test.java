@@ -5,7 +5,7 @@ public class Test {
     public static void main(String[] args) {
 
         ArrayList<Integer> testArr = new ArrayList<>
-                (Arrays.asList(3,6,7,2,4,90,43,103,2,30234,56,5,3,2,76,43,34,102,9));
+                (Arrays.asList(3, 6, 7, 2, 4, 90, 43, 103, 2, 30234, 56, 5, 3, 2, 76, 43, 34, 102, 9));
         System.out.println();
         System.out.print("Unsorted test array:\t");
         Utils.printArray(testArr);
